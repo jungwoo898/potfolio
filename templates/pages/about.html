@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<section class="about-me container-xl mt-5 mb-5">
+  <div class="row align-items-start gx-0">
+    <!-- 좌측: 텍스트 -->
+     <div class="col-lg-4 mb-4 ps-4">
+      <h1 class="display-4" style=" font-size: 3.0rem;">
+        안녕하세요, <br> 책임감이 강한 <br> 학생 오정우입니다.
+      </h1>
+      <p class="lead">
+        <br>
+        다방면의 지식을 추구해 왔습니다.<br>
+        어디서든 가치있는 존재가 되고 싶습니다.<br>
+      </p>
+
+      <ul class="list-unstyled mt-4">
+        <li class="mb-3">
+          <strong>WORK EXPERIENCE</strong>
+          <ul>
+            <li>정릉어울림축제 - 총책임자 (2023.11 ~ 2024.02)</li>
+            <li>서울연탄은행 - 인턴 (2020.12 ~ 2021.02)</li>
+          </ul>
+        </li>
+        <li class="mb-3">
+          <strong>EDUCATION</strong>
+          <ul>
+            <li>행정학, 경희대학교 (2020.03 ~ 2025.08)</li>
+            <li>경영학, 학점은행제 (2022.03 ~ 2025.08)</li>
+            <li>LG U+ SW CAMP (2025.01 ~ 현재)</li>
+          </ul>
+        </li>
+        <li class="mb-3">
+          <strong>AWORD</strong>
+          <ul>
+            <li>농축산물 빅데이터 서비스 공모전 은상 (2024)</li>
+            <li>특허캠프 은상 (2024)</li>
+            <li>전국학생통계활용대회 대상(2012)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 우측: 프로필 이미지 -->
+    <div class="col-lg-3 offset-lg-1 mb-4 align-self-start">
+      <img
+        src="{% static 'images/myprofile.jpg' %}"
+        alt="Profile"
+        class="img-fluid shadow"
+        style="max-width: 650px;"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio container bg-light py-5">
+  <h2 class="mb-4">PORTFOLIO</h2>
+  <div class="row">
+    {% for item in portfolio_items %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100" data-bs-toggle="modal" data-bs-target="#{{ item.modal_id }}">
+          <img
+            class="card-img-top"
+            src="{% static item.image_path %}"
+            alt="{{ item.title }}"
+          >
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Modals -->
+  {% include 'pages/about_modals.html' %}
+{% endblock %}

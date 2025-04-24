@@ -1,0 +1,38 @@
+body {
+    /* 배경 이미지: static/images/kyunghee_bg.png 경로 기준으로 */
+    background: url("../images/kyunghee_bg.png") no-repeat center center fixed;
+    background-size: cover;
+
+    /* 본문 텍스트 스타일 */
+    color: #FFFFFF; /* 본문 기본은 순수 화이트 */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* 가독성 향상 그림자 */
+}
+
+h1, h2, h3 {
+    /* 전역 제목 컬러 및 그림자 */
+    color: #C1A25E; /* 경희대 골드 계열 */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+
+a, .btn {
+    /* 링크 및 버튼 텍스트 */
+    color: #F2F2F2;
+}
+
+.btn-primary {
+    /* 주요 버튼 스타일 */
+    background-color: rgba(128, 31, 27, 0.9); /* 경희대 레드 계열 */
+    border-color: rgba(128, 31, 27, 0.9);
+    color: #FFFFFF;
+}
+
+.card {
+    /* 카드 컴포넌트 배경/텍스트 */
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #000000; /* 카드 내부는 블랙 텍스트로 */
+}
+
+/* 필요하면 섹션 간 여백도 추가 */
+section {
+    margin-bottom: 150px;
+}

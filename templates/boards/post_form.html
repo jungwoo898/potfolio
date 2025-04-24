@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <h2>{{ board_type|capfirst }} 글쓰기</h2>
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="id_title" class="form-label">제목</label>
+          <input type="text"
+                 name="title"
+                 id="id_title"
+                 class="form-control"
+                 placeholder="제목을 입력하세요"
+                 required>
+        </div>
+        <div class="mb-3">
+          <label for="id_content" class="form-label">내용</label>
+          <textarea name="content"
+                    id="id_content"
+                    rows="8"
+                    class="form-control"
+                    placeholder="내용을 입력하세요"
+                    required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">등록</button>
+        <a href="{% url 'boards:post_list' board_type %}"
+           class="btn btn-secondary ms-2">취소</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

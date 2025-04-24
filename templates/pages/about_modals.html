@@ -1,0 +1,87 @@
+{# templates/pages/about_modals.html #}
+{% load static %}
+
+<!-- 정릉어울림축제 Modal -->
+<div class="modal fade text-dark" id="festival" tabindex="-1" aria-labelledby="festivalModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="festivalModalLabel">정릉어울림축제</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-7">
+            <img src="{% static 'images/festival.png' %}" class="img-fluid" alt="정릉어울림축제">
+          </div>
+          <div class="col-lg-5">
+            <p>
+              전통시장의 현대적 가치를 발굴·홍보하기 위해 기획·운영한 <br>
+              “정릉어울림축제”는 하루 724명의 방문객을 기록하며<br>
+              지역 활성화에 기여했습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 서울연탄은행 인턴 Modal -->
+<div class="modal fade text-dark" id="intern" tabindex="-1" aria-labelledby="internModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="internModalLabel">서울연탄은행 인턴십</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-7">
+            <img src="{% static 'images/intern.jpg' %}" class="img-fluid" alt="서울연탄은행 인턴">
+          </div>
+          <div class="col-lg-5">
+            <p>
+              2020~21년 겨울, 서울연탄은행에서 인턴으로 근무하며<br>
+              취약계층을 위한 연탄 배달·사회복지 프로그램을 지원했습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 교육 이모저모 Modal -->
+<div class="modal fade text-dark" id="study" tabindex="-1" aria-labelledby="studyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="studyModalLabel">교육 이모저모</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-7">
+            <img src="{% static 'images/study.jpg' %}" class="img-fluid" alt="교육 수료 사진">
+          </div>
+          <div class="col-lg-5">
+            <p>
+              ADSP, 디지털 마케팅, 갈등관리, 경제이해력, 특허, 유통관리 ,SW 등 다양한<br>
+              전문 교육 과정을 수료하고 자격증을 취득하며 역량을 강화했습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
